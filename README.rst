@@ -1,8 +1,8 @@
 .. SPDX-License-Identifier: AGPL-3.0-or-later
 
 .. figure:: https://raw.githubusercontent.com/searxng/searxng/master/src/brand/searxng.svg
-   :target: https://searxng.github.io/searxng/
-   :alt: SearXNG
+   :target: https://theeddie.github.io/searxng/
+   :alt: Webrats.xyz
    :width: 100%
    :align: center
    
