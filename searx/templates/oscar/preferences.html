@@ -1,3 +1,190 @@
+Last login: Tue Dec  7 19:01:52 on ttys001
+eddie@Eddies-Mac-mini ~ % dig 171.6.146.129             
+
+; <<>> DiG 9.10.6 <<>> 171.6.146.129
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 58974
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;171.6.146.129.			IN	A
+
+;; AUTHORITY SECTION:
+.			86400	IN	SOA	a.root-servers.net. nstld.verisign-grs.com. 2021120702 1800 900 604800 86400
+
+;; Query time: 75 msec
+;; SERVER: 10.0.0.1#53(10.0.0.1)
+;; WHEN: Tue Dec 07 20:17:48 CST 2021
+;; MSG SIZE  rcvd: 117
+
+eddie@Eddies-Mac-mini ~ % ssh -i arm.key ubuntu@129.146.83.26 
+^C
+eddie@Eddies-Mac-mini ~ % ssh -i arm.key ubuntu@129.146.6.171
+The authenticity of host '129.146.6.171 (129.146.6.171)' can't be established.
+ED25519 key fingerprint is SHA256:o66zBnnsdGGJYdvcdKEJflDlWQyGjZkPlpQniN2K7ZE.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '129.146.6.171' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-1022-oracle aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Dec  7 19:33:48 MST 2021
+
+  System load:             0.0
+  Usage of /:              12.3% of 44.97GB
+  Memory usage:            13%
+  Swap usage:              0%
+  Processes:               216
+  Users logged in:         0
+  IPv4 address for enp0s3: 10.0.90.219
+  IPv6 address for enp0s3: 2603:c020:5:d5e3:e55e:1c5a:1cda:d9cb
+
+
+0 updates can be applied immediately.
+
+
+Last login: Tue Dec  7 11:48:55 2021 from 146.70.50.37
+ubuntu@webrats-xyz:~$ sudo -i
+root@webrats-xyz:~# cd webrats/templates/__common__/
+root@webrats-xyz:~/webrats/templates/__common__# ls
+about.html      opensearch.xml               searxng-wordmark.min.svg
+new_issue.html  opensearch_response_rss.xml
+root@webrats-xyz:~/webrats/templates/__common__# vi about.html 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root@webrats-xyz:~/webrats/templates/__common__# ls
+about.html  new_issue.html  opensearch.xml  opensearch_response_rss.xml  searxng-wordmark.min.svg
+root@webrats-xyz:~/webrats/templates/__common__# cd ..
+root@webrats-xyz:~/webrats/templates# ls
+__common__  oscar  simple
+root@webrats-xyz:~/webrats/templates# cd oscar/
+root@webrats-xyz:~/webrats/templates/oscar# ls
+404.html       categories.html  loaderio-9d0dd682e1334c75007869d371b1b999       navbar.html       search.html       time-range.html
+about.html     index.html       loaderio-9d0dd682e1334c75007869d371b1b999.html  preferences.html  search_full.html
+advanced.html  infobox.html     macros.html                                     result_templates  stats.html
+base.html      languages.html   messages                                        results.html      test.html
+root@webrats-xyz:~/webrats/templates/oscar# vi navbar.html 
+root@webrats-xyz:~/webrats/templates/oscar# ls
+404.html       categories.html  loaderio-9d0dd682e1334c75007869d371b1b999       navbar.html       search.html       time-range.html
+about.html     index.html       loaderio-9d0dd682e1334c75007869d371b1b999.html  preferences.html  search_full.html
+advanced.html  infobox.html     macros.html                                     result_templates  stats.html
+base.html      languages.html   messages                                        results.html      test.html
+root@webrats-xyz:~/webrats/templates/oscar# vi index.html 
+root@webrats-xyz:~/webrats/templates/oscar# vi base.html 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root@webrats-xyz:~/webrats/templates/oscar# ls -alFt
+total 140
+drwxrwxr-x 4 searx searx  4096 Dec  7 19:37 ./
+drwxrwxr-x 2 searx searx  4096 Dec  6 16:31 result_templates/
+-rw-r--r-- 1 root  root     42 Dec  6 16:30 loaderio-9d0dd682e1334c75007869d371b1b999.html
+-rw-r--r-- 1 root  root      4 Dec  6 16:22 test.html
+-rw-r--r-- 1 root  root      0 Dec  6 16:21 loaderio-9d0dd682e1334c75007869d371b1b999
+-rw-rw-r-- 1 searx searx   565 Dec  6 11:35 navbar.html
+-rw-rw-r-- 1 searx searx  5688 Dec  6 11:34 base.html
+-rw-rw-r-- 1 searx searx  1112 Dec  6 11:33 index.html
+-rw-rw-r-- 1 searx searx 31020 Dec  3 12:24 preferences.html
+drwxrwxr-x 5 searx searx  4096 Dec  3 00:17 ../
+-rw-rw-r-- 1 searx searx   313 Dec  3 00:17 404.html
+-rw-rw-r-- 1 searx searx   156 Dec  3 00:17 about.html
+-rw-rw-r-- 1 searx searx   559 Dec  3 00:17 advanced.html
+-rw-rw-r-- 1 searx searx   783 Dec  3 00:17 categories.html
+-rw-rw-r-- 1 searx searx  2266 Dec  3 00:17 infobox.html
+-rw-rw-r-- 1 searx searx   692 Dec  3 00:17 languages.html
+-rw-rw-r-- 1 searx searx  6645 Dec  3 00:17 macros.html
+drwxrwxr-x 2 searx searx  4096 Dec  3 00:17 messages/
+-rw-rw-r-- 1 searx searx 10773 Dec  3 00:17 results.html
+-rw-rw-r-- 1 searx searx  1283 Dec  3 00:17 search.html
+-rw-rw-r-- 1 searx searx  1173 Dec  3 00:17 search_full.html
+-rw-rw-r-- 1 searx searx 10049 Dec  3 00:17 stats.html
+-rw-rw-r-- 1 searx searx  1017 Dec  3 00:17 time-range.html
+root@webrats-xyz:~/webrats/templates/oscar# vi preferences.html 
+
 {% from 'oscar/macros.html' import preferences_item_header, preferences_item_header_rtl, preferences_item_footer, preferences_item_footer_rtl, checkbox_toggle, support_toggle, custom_select_class %}
 {% extends "oscar/base.html" %}
 {%- macro engine_about(search_engine, id) -%}
@@ -130,7 +317,7 @@
                     </div>
                     {% endif %}
                     {% if 'language' not in locked_preferences %}
-                    {% set language_label = _('Search language') %}
+                    {% set language_label = _('WebRats language') %}
                     {% set language_info = _('What language do you prefer for search?') %}
                     {{ preferences_item_header(language_info, language_label, rtl, 'language') }}
                                                 {% include 'oscar/languages.html' %}
@@ -157,13 +344,13 @@
                             <option value=""> - </option>
                             {% for backend in autocomplete_backends %}
                             <option value="{{ backend }}" {% if backend == autocomplete %}selected="selected"{% endif %}>{{ backend }}</option>
-                            {% endfor %}
+ {% endfor %}
                         </select>
                     {{ preferences_item_footer(autocomplete_info, autocomplete_label, rtl) }}
                     {% endif %}
 
                     {{ plugin_of_category('general' )}}
-
+    
                     {% if 'doi_resolver' not in locked_preferences %}
                     {% set label = _('Open Access DOI resolver') %}
                     {% set info = _('Redirect to open-access versions of publications when available (plugin required)') %}
@@ -208,7 +395,7 @@
 
                         {% if 'theme' not in locked_preferences %}
                         {% set theme_label = _('Theme') %}
-                        {% set theme_info = _('Change SearXNG layout') %}
+                        {% set theme_info = _('Change WebRats layout') %}
                         {{ preferences_item_header(theme_info, theme_label, rtl, 'theme') }}
                             <select class="form-control {{ custom_select_class(rtl) }}" name="theme" id="theme">
                                 {% for name in themes %}
@@ -217,17 +404,17 @@
                             </select>
                         {{ preferences_item_footer(theme_info, theme_label, rtl) }}
                         {% endif %}
-
+        
                         {% if 'oscar-style' not in locked_preferences %}
                         {{ preferences_item_header(_('Choose style for this theme'), _('Style'), rtl, 'oscar_style') }}
                             <select class="form-control {{ custom_select_class(rtl) }}" name="oscar-style" id="oscar_style">
                                 <option value="logicodev" >Logicodev</option>
                                 <option value="pointhi" {% if preferences.get_value('oscar-style') == 'pointhi' %}selected="selected"{% endif %}>Pointhi</option>
-                                <option value="logicodev-dark" {% if preferences.get_value('oscar-style') == 'logicodev-dark' %}selected="selected"{% endif %}>Logicodev dark</option>
+                                <option value="logicodev-dark" {% if preferences.get_value('oscar-style') == 'logicodev-dark' %}selected="selected"{% endif %}>Logicodev dark</option>       
                             </select>
                         {{ preferences_item_footer(_('Choose style for this theme'), _('Style'), rtl) }}
                         {% endif %}
-
+    
                         {% set label = _('Show advanced settings') %}
                         {% set info = _('Show advanced settings panel in the home page by default') %}
                         {{ preferences_item_header(info, label, rtl, 'advanced_search') }}
@@ -236,7 +423,7 @@
                                 <option value="0" {% if not preferences.get_value('advanced_search')%}selected="selected"{% endif %}>{{ _('Off')}}</option>
                             </select>
                         {{ preferences_item_footer(info, label, rtl) }}
-
+    
                         {% if 'results_on_new_tab' not in locked_preferences %}
                         {% set label = _('Results on new tabs') %}
                         {% set info = _('Open result links on new browser tabs') %}
@@ -268,10 +455,10 @@
                             </select>
                         {{ preferences_item_footer(method_info, method_label, rtl) }}
                         {% endif %}
-
+                
                         {% if 'image_proxy' not in locked_preferences %}
                         {% set image_proxy_label = _('Image proxy') %}
-                        {% set image_proxy_info = _('Proxying image results through SearXNG') %}
+                        {% set image_proxy_info = _('Proxying image results through WebRats') %}
                         {{ preferences_item_header(image_proxy_info, image_proxy_label, rtl, 'image_proxy') }}
                             <select class="form-control {{ custom_select_class(rtl) }}" name="image_proxy" id="image_proxy">
                                 <option value="1" {% if image_proxy  %}selected="selected"{% endif %}>{{ _('Enabled') }}</option>
@@ -279,7 +466,7 @@
                             </select>
                         {{ preferences_item_footer(image_proxy_info, image_proxy_label, rtl) }}
                         {% endif %}
-
+                        
                         {% if 'query_in_title' not in locked_preferences %}
                         {% set query_in_title_label = _("Query in the page's title") %}
                         {% set query_in_title_info = _("When enabled, the result page's title contains your query. Your browser can record this title") %}
@@ -289,27 +476,27 @@
                                 <option value="" {% if not query_in_title %}selected="selected"{% endif %}>{{ _('Disabled')}}</option>
                             </select>
                         {{ preferences_item_footer(query_in_title_info, query_in_title_label, rtl) }}
-                        {% endif %}
-
+                        {% endif %}             
+                    
                         {{ plugin_of_category('privacy' )}}
                     </div>
                 </fieldset>
-            </div>
+            </div>  
             <div class="tab-pane active_if_nojs" id="tab_engine">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-justified hide_if_nojs" role="tablist">
                     {% for categ in all_categories %}
                     <li{% if loop.first %} class="active"{% endif %}><a href="#tab_engine_{{ categ|replace(' ', '_') }}" role="tab" data-toggle="tab">{{ _(categ) }}</a></li>
                     {% endfor %}
-                </ul>
-
+                </ul>   
+                    
                 <noscript>
                     <h3>{{ _('Engines') }}</h3>
                 </noscript>
-
+                    
                 <!-- Tab panes -->
                 <div class="tab-content">
-
+                        
                     <div class="hide_if_nojs">
                         <p class="text-{% if rtl %}left{% else %}right{% endif %}">
                             <button type="button" class="btn btn-default btn-success" id="allow-all-engines">{{ _("Allow all") }}</button>
@@ -408,7 +595,7 @@
                     </thead>
                     <tbody>
                         <td></td>
-                        <th scope="colgroup" colspan="4">{{ _("This is the list of SearXNG's instant answering modules.") }}</th>
+                        <th scope="colgroup" colspan="4">{{ _("This is the list of WebRats's instant answering modules.") }}</th>
                         {% for answerer in answerers %}
                         <tr>
                             <td></td>
@@ -442,8 +629,8 @@
                     <h3>{{ _('Cookies') }}</h3>
                 </noscript>
                 <p class="text-muted">
-                    {{ _('This is the list of cookies and their values SearXNG is storing on your computer.') }}<br />
-                    {{ _('With that list, you can assess SearXNG transparency.') }}<br />
+                    {{ _('This is the list of cookies and their values WebRats is storing on your computer.') }}<br />
+                    {{ _('With that list, you can assess WebRats transparency.') }}<br />
                 </p>
                 {% if cookies %}
                 <table class="table table-striped">
@@ -466,7 +653,7 @@
         </div>
 
         <p class="text-muted">
-          {{ _('These settings are stored in your cookies, this allows us not to store this data about you.') }}
+{{ _('These settings are stored in your cookies, this allows us not to store this data about you.') }}
           {{ _("These cookies serve your sole convenience, we don't use these cookies to track you.") }}
         </p>
 
@@ -484,3 +671,4 @@
     </form>
 </div>
 {% endblock %}
+                                                                                                                                                                   16,5          Top
