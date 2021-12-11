@@ -1,14 +1,14 @@
 general:
   debug: false              # Debug mode, only for development
-  instance_name: "SearXNG"  # displayed name
+  instance_name: "WebRats.xyz"  # displayed name
   contact_url: false        # mailto:contact@example.com
 
 brand:
-  new_issue_url: https://github.com/searxng/searxng/issues/new
-  docs_url: https://searxng.github.io/searxng
+  new_issue_url: https://github.com/theeddie/webratsxyz/issues/new
+  docs_url: https://www.webrats.xyz
   public_instances: https://searx.space
-  wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/searxng/searxng/issues
+  wiki_url: https://www.webrats.xyz
+  issue_url: https://www.webrats.xyz
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
