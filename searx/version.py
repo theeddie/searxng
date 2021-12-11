@@ -86,7 +86,7 @@ def get_git_version():
         )
     except subprocess.CalledProcessError as e:
         if e.returncode == 1:
-            git_version += "-dirty"
+            git_version += "-w"
         else:
             logger.warning(
                 '"%s" returns an unexpected return code %i', e.returncode, e.cmd
