@@ -6,12 +6,7 @@
    :width: 100%
    :align: center
    
-|SearXNG install|
-|SearXNG homepage|
-|SearXNG wiki|
-|AGPL License|
-|Issues|
-|commits|
+
 |weblate|
 |WebRats logo|
 
