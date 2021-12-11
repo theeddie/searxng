@@ -4,11 +4,11 @@ general:
   contact_url: false        # mailto:contact@example.com
 
 brand:
-  new_issue_url: https://github.com/theeddie/webratsxyz/issues/new
-  docs_url: https://www.webrats.xyz
+  new_issue_url: https://github.com/theeddie/searxng/issues/new
+  docs_url: https://searxng.github.io/searxng
   public_instances: https://searx.space
-  wiki_url: https://www.webrats.xyz
-  issue_url: https://www.webrats.xyz
+  wiki_url: https://github.com/searxng/searxng/wiki
+  issue_url: https://github.com/theddie/searxng/issues
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
@@ -16,23 +16,17 @@ search:
   # Existing autocomplete backends: "dbpedia", "duckduckgo", "google",
   # "startpage", "swisscows", "qwant", "wikipedia" - leave blank to turn it off
   # by default.
-  autocomplete: ""
+  autocomplete: 'google'
   # Default search language - leave blank to detect from browser information or
   # use codes from 'languages.py'
-  default_lang: ""
-  # Available languages
-  # languages:
-  #  - all
-  #  - es
-  #  - de
-  #  - it-IT
-  #  - en-GB
+  default_lang: 'en-US'
   # ban time in seconds after engine errors
   ban_time_on_fail: 5
   # max ban time in seconds after engine errors
   max_ban_time_on_fail: 120
   # remove format to deny access, use lower case.
   # formats: [html, csv, json, rss]
+  # remove format to deny access, use lower case.
   formats:
     - html
 
@@ -41,14 +35,13 @@ server:
   # instance's enviroment (make buildenv)
   port: 8888
   bind_address: "127.0.0.1"
-  base_url: false  # Possible values: false or "https://example.org/location".
+  base_url: 'https://www.webrats.xyz'  # Possible values: false or "https://example.org/location".
 
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "ultrasecretkey"  # change this!
+  secret_key: "tonykisagod"  # change this!
   # Proxying image results through searx
-  image_proxy: false
   # 1.0 and 1.1 are supported
   http_protocol_version: "1.0"
   # POST queries are more secure as they don't show up in history but may cause
@@ -78,7 +71,7 @@ ui:
     # default style of oscar
     oscar_style: logicodev
     # style of simple theme: auto, light, dark
-    simple_style: auto
+    simple_style: light
     # Open result links in a new tab by default
     # results_on_new_tab: false
     # categories_order :
@@ -299,6 +292,7 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
+    timeout: 0.5
 
   - name: bing images
     engine: bing_images
@@ -357,6 +351,7 @@ engines:
     engine: ccengine
     categories: images
     shortcut: cce
+    disabled: true
 
   # - name: core.ac.uk
   #   engine: core
@@ -454,9 +449,11 @@ engines:
   - name: wikidata
     engine: wikidata
     shortcut: wd
-    timeout: 3.0
+    timeout: 1.3
     weight: 2
     tests: *tests_infobox
+    disabled: true
+
 
   - name: duckduckgo
     engine: duckduckgo
@@ -616,7 +613,7 @@ engines:
     engine: google
     shortcut: go
     # see https://searxng.github.io/searxng/src/searx.engines.google.html#module-searx.engines.google
-    use_mobile_ui: false
+    use_mobile_ui: true
     # additional_tests:
     #   android: *test_android
 
@@ -700,7 +697,7 @@ engines:
   - name: gpodder
     engine: json_engine
     shortcut: gpod
-    timeout: 4.0
+    timeout: 1.0
     paging: false
     search_url: https://gpodder.net/search.json?q={query}
     url_query: url
@@ -1093,7 +1090,7 @@ engines:
     engine: qwant
     shortcut: qw
     categories: general
-    disabled: false
+    disabled: true
     additional_tests:
       rosebud: *test_rosebud
 
@@ -1249,7 +1246,7 @@ engines:
   - name: startpage
     engine: startpage
     shortcut: sp
-    timeout: 6.0
+    timeout: 1.1
     disabled: true
     additional_tests:
       rosebud: *test_rosebud
@@ -1338,7 +1335,8 @@ engines:
   - name: yahoo
     engine: yahoo
     shortcut: yh
-    disabled: true
+    disabled: false
+    timeout: 0.7
 
   - name: yahoo news
     engine: yahoo_news
@@ -1354,6 +1352,13 @@ engines:
     #
     # Or you can use the html non-stable engine, activated by default
     engine: youtube_noapi
+
+  - name: yggtorrent
+    engine: yggtorrent
+    shortcut: ygg
+    url: https://www4.yggtorrent.li/
+    disabled: true
+    timeout: 4.0
 
   - name: dailymotion
     engine: dailymotion
@@ -1392,7 +1397,7 @@ engines:
     base_url: "https://{language}.wikinews.org/"
     number_of_results: 5
     search_type: text
-    disabled: true
+    disabled: disabled
     about:
       website: https://www.wikinews.org/
       wikidata_id: Q964
@@ -1475,6 +1480,7 @@ engines:
   - name: dictzone
     engine: dictzone
     shortcut: dc
+    disabled: true
 
   - name: mymemory translated
     engine: translated
@@ -1498,7 +1504,7 @@ engines:
   - name: 1337x
     engine: 1337x
     shortcut: 1337x
-    disabled: true
+    disabled: false
 
   - name: duden
     engine: duden
@@ -1634,7 +1640,7 @@ engines:
     engine: xpath
     shortcut: woxi
     categories: general
-    timeout: 5.0
+    timeout: 2.0
     disabled: true
     search_url: https://synonyme.woxikon.de/synonyme/{query}.php
     url_xpath: //div[@class="upper-synonyms"]/a/@href
@@ -1684,12 +1690,14 @@ engines:
     content_xpath: //p[1][@class="snippet-description"]
     suggestion_xpath: //div[@class="text-gray h6"]/a
     categories: general
+    disabled: true
     about:
       website: https://brave.com/search/
       wikidata_id: Q107355971
       use_official_api: false
       require_api_key: false
       results: HTML
+
 
 # Doku engine lets you access to any Doku wiki instance:
 # A public one or a privete/corporate one.
