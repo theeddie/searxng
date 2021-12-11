@@ -12,10 +12,7 @@
 
 Privacy-respecting, hackable `metasearch engine`_
 
-If you are looking for running instances, ready to use, then visit searx.space_.
 
-Otherwise jump to the user_, admin_ and developer_ handbooks you will find on
-our homepage_.
 
 
 .. _metasearch engine: https://en.wikipedia.org/wiki/Metasearch_engine
@@ -24,7 +21,7 @@ our homepage_.
    
 
 
-SearXNG is a fork of `searx`_:
+WebRats is a fork of `searx`_:
 
 * `the differences with searx <https://github.com/searxng/searxng/issues/46>`_
 * `exhaustive changelog <https://github.com/searxng/searxng/wiki/Changes-from-version-1.0.0>`_
