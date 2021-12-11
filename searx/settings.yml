@@ -7,8 +7,8 @@ brand:
   new_issue_url: https://github.com/theeddie/searxng/issues/new
   docs_url: https://searxng.github.io/searxng
   public_instances: https://searx.space
-  wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/theddie/searxng/issues
+  wiki_url: https://github.com/theeddie/webratsxyz/wiki
+  issue_url: https://github.com/theeddie/webratsxyz/issues
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
