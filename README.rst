@@ -8,7 +8,7 @@
    
 
 
-|WebRats logo|
+
 
 Privacy-respecting, hackable `metasearch engine`_
 
@@ -39,3 +39,4 @@ We need translators, suggestions are welcome at https://weblate.bubu1.eu/project
 
 .. figure:: https://weblate.bubu1.eu/widgets/searxng/-/multi-auto.svg
    :target: https://weblate.bubu1.eu/projects/searxng/
+|WebRats logo|
