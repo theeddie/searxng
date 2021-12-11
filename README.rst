@@ -7,7 +7,7 @@
    :align: center
    
 
-|weblate|
+
 |WebRats logo|
 
 Privacy-respecting, hackable `metasearch engine`_
