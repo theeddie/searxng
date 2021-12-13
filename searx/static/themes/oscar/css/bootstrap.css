@@ -3461,7 +3461,7 @@ fieldset[disabled] .btn-danger.focus {
 }
 .btn-link {
   font-weight: 400;
-  color: #337ab7;
+  color: #C1D7E9;
   border-radius: 0;
 }
 .btn-link,
@@ -5144,11 +5144,11 @@ a.thumbnail.active {
 }
 .alert-danger {
   color: #a94442;
-  background-color: #f2dede;
+  background-color: #FCF8F8;
   border-color: #ebccd1;
 }
 .alert-danger hr {
-  border-top-color: #e4b9c0;
+  border-top-color: #F9F1F2;
 }
 .alert-danger .alert-link {
   color: #843534;
