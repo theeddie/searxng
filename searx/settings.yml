@@ -11,7 +11,6 @@ brand:
   issue_url: https://github.com/theeddie/webratsxyz/issues
 
 search:
-  # Filter results. 0: None, 1: Moderate, 2: Strict
   safe_search: 0
   # Existing autocomplete backends: "dbpedia", "duckduckgo", "google",
   # "startpage", "swisscows", "qwant", "wikipedia" - leave blank to turn it off
@@ -287,6 +286,7 @@ engines:
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
+    timeout: 0.4
     base_url: 'https://{language}.wikipedia.org/'
 
   - name: bing
@@ -450,7 +450,7 @@ engines:
   - name: wikidata
     engine: wikidata
     shortcut: wd
-    timeout: 0.6
+    timeout: 0.3
     weight: 2
     tests: *tests_infobox
     disabled: false
