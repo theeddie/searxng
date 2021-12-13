@@ -293,6 +293,7 @@ engines:
     engine: bing
     shortcut: bi
     timeout: 0.5
+    disabled: false
 
   - name: bing images
     engine: bing_images
@@ -449,7 +450,7 @@ engines:
   - name: wikidata
     engine: wikidata
     shortcut: wd
-    timeout: 1.3
+    timeout: 0.7
     weight: 2
     tests: *tests_infobox
     disabled: true
