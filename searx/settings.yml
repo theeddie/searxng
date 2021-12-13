@@ -1090,7 +1090,8 @@ engines:
   - name: qwant
     engine: qwant
     shortcut: qw
-    timeout: 0.7
+    timeout: 0.6
+    disabled: True 
     categories: general
     additional_tests:
       rosebud: *test_rosebud
@@ -1371,7 +1372,8 @@ engines:
 
   - name: wiby
     engine: json_engine
-    search_url: https://wiby.me/json/?q={query}
+    paging : True
+    search_url : https://wiby.me/json/?q={query}&o={pageno}0
     url_query: URL
     title_query: Title
     content_query: Snippet
