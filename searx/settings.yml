@@ -450,10 +450,10 @@ engines:
   - name: wikidata
     engine: wikidata
     shortcut: wd
-    timeout: 0.7
+    timeout: 0.6
     weight: 2
     tests: *tests_infobox
-    disabled: true
+    disabled: false
 
 
   - name: duckduckgo
@@ -1090,8 +1090,9 @@ engines:
   - name: qwant
     engine: qwant
     shortcut: qw
+    timeout: 0.7
     categories: general
-    disabled: true
+    disabled: false
     additional_tests:
       rosebud: *test_rosebud
 
@@ -1247,7 +1248,7 @@ engines:
   - name: startpage
     engine: startpage
     shortcut: sp
-    timeout: 1.1
+    timeout: 0.8
     disabled: true
     additional_tests:
       rosebud: *test_rosebud
