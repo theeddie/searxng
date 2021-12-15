@@ -28,6 +28,12 @@ WebRats is a fork of `searx`_:
 
 .. _searx: https://github.com/searx/searx
 
+
+Contact
+"""""""
+
+Matrix: `#searxng:matrix.org <https://matrix.to/#/#searxng:matrix.org>`_
+
  
 Translations
 """"""""""""
