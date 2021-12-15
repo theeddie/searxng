@@ -453,7 +453,7 @@ engines:
     timeout: 0.3
     weight: 2
     tests: *tests_infobox
-    disabled: false
+    disabled: true
 
 
   - name: duckduckgo
