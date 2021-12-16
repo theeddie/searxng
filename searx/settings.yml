@@ -705,7 +705,7 @@ engines:
     title_query: title
     content_query: description
     page_size: 19
-    categories: social media, files, general
+    categories: music
     disabled: true
     about:
       website: https://gpodder.net
@@ -857,7 +857,7 @@ engines:
     engine: xpath
     timeout: 4.0
     disabled: true
-    categories: general
+    categories: music
     paging: true
     search_url: https://search.azlyrics.com/search.php?q={query}&w=lyrics&p={pageno}
     url_xpath: //td[@class="text-left visitedlyr"]/a/@href
@@ -1613,6 +1613,7 @@ engines:
   - name: mediathekviewweb
     engine: mediathekviewweb
     shortcut: mvw
+    disabled: true
 
   # - name: yacy
   #   engine: yacy
