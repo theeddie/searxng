@@ -5,3 +5,89 @@
 	font-size: 10px !important;
 	text-align: center !important;
 	width: 100% !important;}
+@media (min-width:600px) {
+body.about_endpoint > div.container > div {margin-top: 20px !important;
+    width: 80%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    margin-bottom: 50px !important;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;}
+body.preferences_endpoint > div.container > div > h1 {display: none !important;}
+div.searx-navbar > span.pull-right {
+margin-top: -300px;
+    text-align: right !important;
+    width: 100% !important;}
+.suggestion_item {margin: 2px 5px 30px !important;}
+.searx-navbar {background: #29314D !important;     margin-top: -70px !important; margin-bottom: 0px !important;}
+.searx-navbar .instance a {color: #fff !important;}
+.container {width: 90% !important;}
+#search_form .input-group-btn .btn {    height: 34px;}
+.search_categories input[type="checkbox"]:checked + label, #categories input[type="checkbox"]:checked + label {border-bottom: #29314D 5px solid !important;}
+.result_header {font-size: 19px !important; margin-bottom: 5px !important;}
+.result-content, .result-format, .result-source {font-size: 16px !important; color: #5e5e5e !important;}
+.external-link {color: #29314D !important;}
+.infobox .btn {background-color: #29314D !important;}
+a:focus, a:hover {color: #29314D !important;}
+a {color: #29314D;}
+body {background: url('/s/static/themes/oscar/img/backgroun1.png') !important;}
+.img-thumbnail {width: 400px !important;
+object-fit: cover !important;
+height: 150px !important;
+max-height: 150px !important;
+min-height: auto !important;}
+.result-default, .result-code, .result-torrent, .result-videos, .result-map {background-color: #fff !important;padding: 20px !important;margin-bottom: 20px !important;}
+#search_form {width: 80%;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+margin: 0 auto;
+    margin-top: 20px;
+
+.text-muted {
+        color: #777 !important;
+        font-style: italic !important;
+        font-size: 10px !important;
+        text-align: center !important;
+        width: 100% !important;}
+}
+{
+body a {color: #29314D;}
+#search_form .input-group-btn .btn::hover {background-color: #29314D !important;}
+.search_categories label, #categories label, .search_categories .input-group-addon, #categories .input-group-addon {font-size: 1.6rem !important; text-transform: uppercase !important;}
+
+.search_categories label, #categories label, .search_categories .input-group-addon, #categories .input-group-addon::hover {    border-bottom: #29314D 5px solid !important;}
+.modal-dialog {width: 800px !important;}
+.modal-title {text-align: center !important;}
+.text-muted {
+        color: #777 !important;
+        font-style: italic !important;
+        font-size: 10px !important;
+        text-align: center !important;
+        width: 100% !important;}
+div.modal-footer > span.label.label-default.pull-right {width:100% !important; text-align: center !important;}
+.img-thumbnail:hover {filter: brightness(50%)}
+.result-videos {width: 100% !important;}
+.list-group-item, .media-object, .thumbnail {
+        width: 100% !important;}
+#search_form .input-group-btn .btn:hover {background-color: #29314D !important; }
+.searx-navbar a, .searx-navbar a:hover {color: #fff !important;}
+div.modal-body >p.result-format {display: none !important;}
+div.modal-body >p.result-source {display: none !important;}
+span.instance.pull-left {display: none !important;}
+.searx-navbar {background: #29314D00 !important;}
+.searx-navbar a, .searx-navbar a:hover {color: #000 !important;}
+body {background: url('/s/static/themes/oscar/img/backgroun1.png') !important;}
+#main-logo {display: none !important;}
+.searx-navbar::before {content: url("/s/static/themes/oscar/img/webrats.svg");     text-align: center; display:block;width:100%;margin: 0 auto;transform: scale(.6);}
+#advanced-search-container {background-color: #fff !important;
+padding: 20px !important;
+margin-top: 20px !important;
+border: 1px solid #979797 !important;}
+.advanced {margin-top: 20px !important;}
+.search_categories input[type="checkbox"]:checked + label, #categories input[type="checkbox"]:checked + label {border-bottom: #29314D 5px solid !important;}
+}
+	
