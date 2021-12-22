@@ -347,6 +347,9 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
+      # We don't set language: de here because media.ccc.de is not just
+      # for a German audience. It contains many English videos and many
+      # German videos have English subtitles.
 
   - name: ccengine
     engine: ccengine
@@ -765,7 +768,7 @@ engines:
     categories: it
     shortcut: ho
     about:
-      website: https://www.haskell.org/
+      website: https://hoogle.haskell.org/
       wikidata_id: Q34010
       official_api_documentation: https://hackage.haskell.org/api
       use_official_api: false
@@ -1380,6 +1383,8 @@ engines:
     categories: general
     shortcut: wib
     disabled: true
+    about:
+      website: https://wiby.me/
 
   - name: wikibooks
     engine: mediawiki
@@ -1580,6 +1585,7 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
+      language: ko
 
   - name: rubygems
     shortcut: rbg
@@ -1656,6 +1662,7 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
+      language: de
 
   - name: słownik języka polskiego
     engine: sjp
@@ -1683,6 +1690,7 @@ engines:
       use_official_api: false
       require_api_key: false
       results: HTML
+      language: fr
 
   - name: brave
     shortcut: brave

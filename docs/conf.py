@@ -47,8 +47,35 @@ jinja_contexts = {
         'version': {
             'node': os.getenv('NODE_MINIMUM_VERSION')
         },
+        'enabled_engine_count': sum(not x.disabled for x in searx.engines.engines.values()),
     },
 }
+jinja_filters = {
+    'sort_engines':
+    lambda engines: sorted(
+        engines,
+        key=lambda engine: (engine[1].disabled, engine[1].about.get('language', ''), engine[0])
+    )
+}
+
+# Let the Jinja template in configured_engines.rst access documented_modules
+# to automatically link documentation for modules if it exists.
+def setup(app):
+    ENGINES_DOCNAME = 'admin/engines/configured_engines'
+
+    def before_read_docs(app, env, docnames):
+        assert ENGINES_DOCNAME in docnames
+        docnames.remove(ENGINES_DOCNAME)
+        docnames.append(ENGINES_DOCNAME)
+        # configured_engines must come last so that sphinx already has
+        # discovered the python module documentations
+
+    def source_read(app, docname, source):
+        if docname == ENGINES_DOCNAME:
+            jinja_contexts['searx']['documented_modules'] = app.env.domains['py'].modules
+
+    app.connect('env-before-read-docs', before_read_docs)
+    app.connect('source-read', source_read)
 
 # usage::   lorem :patch:`f373169` ipsum
 extlinks = {}

@@ -34,6 +34,8 @@ Contact
 
 Matrix: `#searxng:matrix.org <https://matrix.to/#/#searxng:matrix.org>`_
 
+IRC:  `#searxng on libera.chat <https://web.libera.chat/?channel=#searxng>`_ which is bridged to Matrix.
+
  
 Translations
 """"""""""""
